@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  #root to: 'app/views/items/index.html.erb'
+  resources :items, only: :index
+  root to: 'items#index'
 end

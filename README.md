@@ -52,7 +52,7 @@
 - belongs_to :item
 - has_one :shopping_infomation
 
-## shopping_infomation テーブル
+## shopping_infomations テーブル
 
 | Column               | Type   | Options     |
 | -------------------- | ------ | ----------- |

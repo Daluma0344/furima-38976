@@ -128,7 +128,6 @@
     </div>
     <ul class='item-lists'>
 
-      <%# 商品のインスタンス変数になにか入っている場合、中身のすべてを展開 %>
       <% @items.each do |item|%>
       <li class='list'>
         <%= link_to "#" do %>
@@ -136,7 +135,6 @@
           <%= image_tag item.image.variant(resize: '500x500'), class: "item-img" %>
 
           <%# 商品が売れていればsold outを表示 %>
-          <%# 商品購入機能実装時に条件式を追加する%>
           <div class='sold-out'>
             <span>Sold Out!!</span>
           </div>
@@ -158,10 +156,7 @@
         <% end %>
       </li>
       <% end %>
-      <%# //商品のインスタンス変数になにか入っている場合、中身のすべてを展開 %>
 
-      <%# 商品がない場合は以下のダミー商品が表示 %>
-      <%# 商品がある場合は表示されない %>
       <%if @items.blank? then%>
       <li class='list'>
         <%= link_to '#' do %>
@@ -181,8 +176,6 @@
         <% end %>
       </li>
       <% end %>
-      <%# //商品がある場合は表示されない %>
-      <%# //商品がない場合は以下のダミー商品が表示される %>
     </ul>
   </div>
   <%# /商品一覧 %>

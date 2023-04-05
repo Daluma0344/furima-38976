@@ -5,7 +5,7 @@ class CreateShoppingInformations < ActiveRecord::Migration[6.0]
       t.integer    :prefecture_id,          null: false
       t.string     :municipalities,   null: false
       t.string     :house_number,     null: false
-      t.string     :build_name
+      t.string     :building_name
       t.string     :telephone_number, null: false
       t.references :purchase_record,  null: false, foreign_key: true
       t.timestamps

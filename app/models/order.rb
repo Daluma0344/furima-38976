@@ -1,4 +1,4 @@
-class Order < ApplicationRecord
+class Order 
   include ActiveModel::Model
 
   attr_accessor :user_id, :item_id, :post_code, :prefecture_id, :municipalities, :house_number, :building_name,:telephone_number, :token
@@ -25,6 +25,5 @@ def save
 end
 
 end
-
 
 

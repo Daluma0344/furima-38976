@@ -15,8 +15,9 @@ class Item < ApplicationRecord
   validates :days_shop_id, numericality: { other_than: 1, message: "can't be blank" }
 
   belongs_to :user
+  has_one :purchase_record
   has_one_attached :image
-
+  
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :item_category
   belongs_to :item_condition

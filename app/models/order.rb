@@ -21,9 +21,8 @@ validates :post_code, format: { with: /\A[0-9]{3}-[0-9]{4}\z/, message: "is inva
 
 def save
    order = PurchaseRecord.create(user_id: user_id, item_id: item_id)
-  ShoppingInformation.create(post_code: post_code, prefecture_id: prefecture_id,municipalities: municipalities, house_number: house_number, building_name: building_name, telephone_number: telephone_number, purchase_record_id: order.id)
+   ShoppingInformation.create(post_code: post_code, prefecture_id: prefecture_id, municipalities: municipalities, house_number: house_number, building_name: building_name, telephone_number: telephone_number, purchase_record_id: order.id)
 end
 
 end
-
 
